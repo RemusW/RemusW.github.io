@@ -16,13 +16,17 @@ permissions:
 
 defaults:
     run:
-      working-directory: './portfolio/'
+      working-directory: portfolio
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v2          
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          cache-dependency: portfolio/package.json
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         
