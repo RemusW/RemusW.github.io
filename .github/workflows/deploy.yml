@@ -14,12 +14,12 @@ permissions:
   pages: write
   id-token: write
 
+defaults:
+    run:
+      working-directory: './portfolio/'
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-       run:
-         working-directory: './portfolio/'
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v2          
