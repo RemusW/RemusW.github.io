@@ -7,4 +7,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [svelte(), tailwind()],
   site: 'https://RemusW.github.io',
+  base: '/Portfolio'
 });
