@@ -23,12 +23,10 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v2          
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          cache-dependency-path: portfolio/package.json
       - name: Install, build, and upload your site
         uses: withastro/action@v0
+        with:
+          path: portfolio
         
 
   deploy:
