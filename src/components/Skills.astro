@@ -5,28 +5,25 @@ import Skill from '../components/Skill.astro'
 
 <div class="section">
     <div class="box columns">
-        <div class="column is-3">
+        <div class="column is-one-quarter">
             <figure class="main center">
                 <Icon name="entypo:code"></Icon>
             </figure>
-            <h1 class="title center">Programming</h1>             
+            <h1 class="center">Programming</h1>          
         </div>
-        <div class="column is-2">
-            <Skill
-                title="Python"
-                imgsrc="logos:python"
-            />
-        </div>
-        <div class="column is-2">
-            <Skill
-                title="C++"
-                imgsrc="logos:c-plusplus"
-            />
-        </div>
+            <Skill title="Python" imgsrc="logos:python" />
+            <Skill title="C++" imgsrc="logos:c-plusplus" />
+            <Skill title="Rust" imgsrc="logos:rust"/>
+            <Skill title="Rust" imgsrc="logos:opengl"/>
     </div>
 </div>
 
 <style>
+    h1 {
+        color: white;
+        font-size: 40px;
+    }
+
     .box {
         background-color: #272822;
     }
@@ -35,7 +32,7 @@ import Skill from '../components/Skill.astro'
         width: 256px;
         height: 256px;
         border-radius: 90%;
-        background-color: purple;
+        background-color: paleturquoise;
     }
 
     .icon {
