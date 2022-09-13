@@ -1,60 +1,45 @@
 ---
-
+import { Icon } from 'astro-icon'
 ---
+
+<!-- https://icon-sets.iconify.design/logos/ -->
 
 <section class="section is-medium">
     <div class="center">
-        <div class="content">
-            <div class="box container">
-                <figure class="image">
-                    <img src="head.jpg" alt="Placeholder image">
-                </figure>
+        <div class="content box container">
+            <div class="container">
+              <figure class="image">
+                  <img src="head.jpg" alt="headshot">
+              </figure>
+              <div class="block">
                 <div class="block">
-                    <strong>Remus Wong</strong>
-                    <br>
-                    A graduate of the University of Texas, Remus Wong studied Computer Science 
-                    with a focus on computer graphics. With his highly technical background, he 
-                    is a Technical Artist focused on engineering powerful tools to support effective 
-                    art pipelines. Utilizing game development and programming skills, Remus is interested 
-                    in creating procedurally generated environments, dynamic visual effects, and more 
-                    to craft immersive experiences.
+                  <h1 class="title-1">Remus Wong</h1>
+                  <br>
+                  A graduate of the University of Texas, Remus Wong studied Computer Science 
+                  with a focus on computer graphics. With his highly technical background, he 
+                  is a Technical Artist focused on engineering powerful tools to support effective 
+                  art pipelines. Utilizing game development and programming skills, Remus is interested 
+                  in creating procedurally generated environments, dynamic visual effects, and more 
+                  to craft immersive experiences.
                 </div>
+                <a href="Resume.pdf">
+                  <button class="button is-warning is-medium">Resume</button>
+                </a>
+                <div>
+                  <a class="button" href="https://github.com/RemusW">
+                    <span class="icon">
+                      <Icon name="logos:github-icon"></Icon>
+                    </span>
+                  </a>
+                  <a class="button" href="https://www.linkedin.com/in/remus-wong/">
+                    <span class="icon">
+                      <Icon name="logos:linkedin-icon"></Icon>
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
         </div>
-        <article class="media">
-            <figure class="media-left">
-              <p class="image is-128x128">
-                <img src="head.jpg">
-              </p>
-            </figure>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>Remus Wong</strong>
-                  <br>
-                    A graduate of the University of Texas, Remus Wong studied Computer Science 
-                    with a focus on computer graphics. With his highly technical background, he 
-                    is a Technical Artist focused on engineering powerful tools to support effective 
-                    art pipelines. Utilizing game development and programming skills, Remus is interested 
-                    in creating procedurally generated environments, dynamic visual effects, and more 
-                    to craft immersive experiences.
-                </p>
-              </div>
-              <nav class="level is-mobile">
-                <div class="level-left">
-                  <a class="level-item">
-                    <span class="icon is-small"><i class="fas fa-reply"></i></span>
-                  </a>
-                  <a class="level-item">
-                    <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-                  </a>
-                  <a class="level-item">
-                    <span class="icon is-small"><i class="fas fa-heart"></i></span>
-                  </a>
-                </div>
-              </nav>
-            </div>
-          </article>
     </div>
 
 </section>
@@ -62,7 +47,7 @@
 <style>
     .center{
         margin: auto;
-        width: 50%;
+        width: 70%;
         border: 3px solid green;
         padding: 10px;
     }
@@ -84,6 +69,7 @@
     }
 
     .container{
+      height: 500px;
       display: flex;
       flex-direction: row;
       align-items: flex-start
