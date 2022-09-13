@@ -5,15 +5,17 @@ import { Icon } from 'astro-icon'
 <!-- https://icon-sets.iconify.design/logos/ -->
 
 <section class="section is-medium">
-    <div class="center">
-        <div class="content box container">
-            <div class="container">
-              <figure class="image">
-                  <img src="head.jpg" alt="headshot">
-              </figure>
-              <div class="block">
+    <div class="">
+        <div class="box red center">
+            <div class="columns">
+              <div class="column is-one-third">
+                <figure class="image is-fullwidth">
+                    <img src="head.jpg" alt="headshot">
+                </figure>
+              </div>
+              <div class="column is-two-third">
                 <div class="block">
-                  <h1 class="title-1">Remus Wong</h1>
+                  <h1 class="title is-1">Remus Wong</h1>
                   <br>
                   A graduate of the University of Texas, Remus Wong studied Computer Science 
                   with a focus on computer graphics. With his highly technical background, he 
@@ -22,10 +24,17 @@ import { Icon } from 'astro-icon'
                   in creating procedurally generated environments, dynamic visual effects, and more 
                   to craft immersive experiences.
                 </div>
-                <a href="Resume.pdf">
-                  <button class="button is-warning is-medium">Resume</button>
-                </a>
+                <div class="block">
+                  <a href="Resume.pdf">
+                    <button class="button is-primary is-medium">Resume</button>
+                  </a>
+                </div>
                 <div>
+                  <a class="button" href="mailto:rwong2100@gmail.com">
+                    <span class="icon">
+                      <Icon name="codicon:mail"></Icon>
+                    </span>
+                  </a>
                   <a class="button" href="https://github.com/RemusW">
                     <span class="icon">
                       <Icon name="logos:github-icon"></Icon>
@@ -48,6 +57,7 @@ import { Icon } from 'astro-icon'
     .center{
         margin: auto;
         width: 70%;
+        max-height: 700px;
         border: 3px solid green;
         padding: 10px;
     }
@@ -68,11 +78,20 @@ import { Icon } from 'astro-icon'
       display: flex;
     }
 
+    .green {
+      background-color: #92d82e;
+    }
+
+    .red {
+      background-color: #f52668;
+    }
+
     .container{
-      height: 500px;
+      height: flex;
       display: flex;
       flex-direction: row;
-      align-items: flex-start
+      align-items: flex-start;
+      background-color: #f52668;
     }
 
     .summary {
@@ -85,5 +104,6 @@ import { Icon } from 'astro-icon'
       height: inherit;
       width: inherit;
       object-fit: cover;
+      /* position: relative; */
     }
 </style>
