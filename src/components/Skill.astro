@@ -16,12 +16,13 @@ const { imgsrc, title, level } = Astro.props as Props;
     <div class="center">
         <figure class="chart" data-percent="100">
             <img class="low">
-            <svg width="160" height="160">
-                <circle class="backcircle" cx="110" cy="80" r="70" transform="rotate(-90, 95, 95)"/>
-                <circle class="underlay" cx="110" cy="80" r="70" transform="rotate(-90, 95, 95)"/>
-                <circle class="outer" cx="110" cy="80" r="70" transform="rotate(-90, 95, 95)"/>
+            <svg width="120" height="120">
+                <circle class="backcircle" cx="130" cy="60" r="55" transform="rotate(-90, 95, 95)"/>
+                <circle class="underlay" cx="130" cy="60" r="55" transform="rotate(-90, 95, 95)"/>
+                <circle class="outer" cx="130" cy="60" r="55" transform="rotate(-90, 95, 95)"/>
             </svg>
-            <figure class="image is-96x96">
+            <figure class="image is-64x64">
+                <!-- <img src={imgsrc}> -->
                 <Icon name={imgsrc}></Icon>
             </figure>
         </figure>
@@ -39,11 +40,11 @@ h1 {
 }
 
 .image-container {
-    display: block;
+    display: inline-block;
     /* justify-content: center;
     align-items: center; */
     text-align: center;
-    margin-top: 8ch;
+    /* margin-top: 8ch; */
 }
 
 .center {
@@ -52,10 +53,10 @@ h1 {
     align-items: center;
     /* height: inherit;
     width: inherit; */
-    width: 160px;
+    width: 130px;
     font-size: 24px;
     /* margin: 25px; */
-    height: 160px;
+    height: 120px;
 }
 
 .center figure {
@@ -114,14 +115,14 @@ h1 {
 .underlay {
     fill: none;
     stroke: rgb(230, 230, 230);
-    stroke-width: 15;
+    stroke-width: 10;
     stroke-dasharray: 534;
 }
 
 .outer {
     fill: none;
     stroke: #333;
-    stroke-width: 15;
+    stroke-width: 10;
     stroke-dasharray: 534;
     transition: stroke-dashoffset 1s;
     -webkit-animation-play-state: running;

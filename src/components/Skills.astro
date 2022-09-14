@@ -4,6 +4,8 @@ import Skill from '../components/Skill.astro'
 ---
 
 <div class="section">
+    <progress class="progress progress1 is-small" value="100"></progress>
+    
     <div class="box columns">
         <div class="column is-one-quarter">
             <figure class="main center">
@@ -11,26 +13,72 @@ import Skill from '../components/Skill.astro'
             </figure>
             <h1 class="center">Programming</h1>          
         </div>
-            <Skill title="Python" imgsrc="logos:python" />
+        <div class="column skills">
             <Skill title="C++" imgsrc="logos:c-plusplus" />
+            <Skill title="Python" imgsrc="logos:python" />
+            <Skill title="C#" imgsrc="logos:c-sharp" />
+            <Skill title="Javascript" imgsrc="logos:javascript"/>
             <Skill title="Rust" imgsrc="logos:rust"/>
-            <Skill title="Rust" imgsrc="logos:opengl"/>
+        </div>
+    </div>
+    <br>
+    <div class="box columns">
+        <div class="column is-one-quarter">
+            <figure class="main center">
+                <Icon name="entypo:tools"></Icon>
+            </figure>
+            <h1 class="center">Tools</h1>
+        </div>
+        <div class="column skills">
+            <Skill title="Unity" imgsrc="logos:unity" />
+            <Skill title="Unreal" imgsrc="fontisto:unreal-engine" />
+            <Skill title="Qt" imgsrc="logos:qt"/>
+            <Skill title="OpenGL" imgsrc="simple-icons:opengl"/>
+            <Skill title="Hololens" imgsrc="mdi:hololens"/>
+        </div>
+    </div>
+    <br>
+    <div class="box columns">
+        <div class="column is-one-quarter">
+            <figure class="main center">
+                <Icon name="entypo:pencil"></Icon>
+            </figure>
+            <h1 class="center">Design</h1>
+        </div>
+        <div class="column skills">
+            <Skill title="Unity" imgsrc="simple-icons:houdini" />
+            <Skill title="Unreal" imgsrc="file-icons:unrealscript" />
+            <Skill title="Qt" imgsrc="logos:qt"/>
+            <Skill title="OpenGL" imgsrc="simple-icons:opengl"/>
+            <Skill title="Javascript" imgsrc="logos:javascript"/>
+        </div>
     </div>
 </div>
 
 <style>
     h1 {
         color: white;
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .box {
         background-color: #272822;
+        height: 250px;
+        width: 80%;
+        margin: auto;
+        /* width: ; */
+    }
+
+    .skills {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .main {
-        width: 256px;
-        height: 256px;
+        width: 170px;
+        height: 170px;
+        padding: 30px;
         border-radius: 90%;
         background-color: paleturquoise;
     }
