@@ -6,30 +6,31 @@ import Icon from 'astro-icon';
 export interface Props {
 	title: string;
 	imgsrc: string;
-    level: string;
+  level: string;
+  percent: string;
 }
 
-const { imgsrc, title, level } = Astro.props as Props;
+const { imgsrc, title, level, percent } = Astro.props as Props;
 ---
 
-<div class="image-container">
-    <div class="center">
-        <figure class="chart" data-percent="100">
-            <img class="low">
-            <svg width="120" height="120">
-                <circle class="backcircle" cx="130" cy="60" r="55" transform="rotate(-90, 95, 95)"/>
-                <circle class="underlay" cx="130" cy="60" r="55" transform="rotate(-90, 95, 95)"/>
-                <circle class="outer" cx="130" cy="60" r="55" transform="rotate(-90, 95, 95)"/>
-            </svg>
-            <figure class="image is-64x64">
-                <!-- <img src={imgsrc}> -->
-                <Icon name={imgsrc}></Icon>
-            </figure>
-        </figure>
-    </div>
-    <div>
-        <h1>{title}</h1>
-    </div>
+<div class="image-container column">
+  <div class="center">
+      <figure class="chart" data-percent={percent}>
+          <img class={level}>
+          <svg width="120" height="120">
+              <circle class="backcircle" cx="130" cy="60" r="55" transform="rotate(-90, 95, 95)"/>
+              <circle class="underlay" cx="130" cy="60" r="55" transform="rotate(-90, 95, 95)"/>
+              <circle class="outer" cx="130" cy="60" r="55" transform="rotate(-90, 95, 95)"/>
+          </svg>
+          <figure class="image is-64x64">
+              <img src={imgsrc}>
+              <!-- <Icon name={imgsrc}></Icon> -->
+          </figure>
+      </figure>
+  </div>
+  <div>
+      <h1>{title}</h1>
+  </div>
 </div>
 
 <style>
@@ -91,18 +92,19 @@ h1 {
 
 
 .high + svg .outer {
-  stroke: #0d84ce;
+  stroke: yellow;
 }
 
 .mid + svg .outer {
-  stroke: #f0e040;
+  stroke: greenyellow;
 }
 
 .low + svg .outer {
-  stroke: #83cd29;
+  stroke: rgb(0, 153, 255);
 }
 
 .chart svg {
+
   /* position: absolute;
   top: 0;
   left: 0; */
@@ -123,7 +125,7 @@ h1 {
     fill: none;
     stroke: #333;
     stroke-width: 10;
-    stroke-dasharray: 534;
+    stroke-dasharray: 345;
     transition: stroke-dashoffset 1s;
     -webkit-animation-play-state: running;
 
@@ -132,7 +134,7 @@ h1 {
 }
 
 .chart:hover .outer {
-  stroke-dashoffset: 534 !important;
+  stroke-dashoffset: 345 !important;
   -webkit-animation-play-state: paused;
 }
 /* END Circle colors and graphic positions */
@@ -146,19 +148,19 @@ h1 {
 }
 
 .chart[data-percent='75'] .outer {
-  stroke-dashoffset: 133;
+  stroke-dashoffset: 86;
   -webkit-animation: show75 2s;
   animation: show75 2s;
 }
 
 .chart[data-percent='50'] .outer {
-  stroke-dashoffset: 267;
+  stroke-dashoffset: 172;
   -webkit-animation: show50 2s;
   animation: show50 2s;
 }
 
 .chart[data-percent='25'] .outer {
-  stroke-dashoffset: 401;
+  stroke-dashoffset: 258;
   -webkit-animation: show25 2s;
   animation: show25 2s;
 }
@@ -167,7 +169,7 @@ h1 {
 /* Keyframes for the initial animation */
 @-webkit-keyframes show100 {
   from {
-    stroke-dashoffset: 537;
+    stroke-dashoffset: 345;
   }
   
   to {
@@ -177,7 +179,7 @@ h1 {
 
 @keyframes show100 {
   from {
-    stroke-dashoffset: 537;
+    stroke-dashoffset: 345;
   }
   
   to {
@@ -187,61 +189,61 @@ h1 {
 
 @-webkit-keyframes show75 {
   from {
-    stroke-dashoffset: 537;
+    stroke-dashoffset: 345;
   }
   
   to {
-    stroke-dashoffset: 134;
+    stroke-dashoffset: 86;
   }
 }
 
 @keyframes show75 {
   from {
-    stroke-dashoffset: 537;
+    stroke-dashoffset: 345;
   }
   
   to {
-    stroke-dashoffset: 124;
+    stroke-dashoffset: 86;
   }
 }
 
 @-webkit-keyframes show50 {
   from {
-    stroke-dashoffset: 537;
+    stroke-dashoffset: 345;
   }
   
   to {
-    stroke-dashoffset: 267;
+    stroke-dashoffset: 172;
   }
 }
 
 @keyframes show50 {
   from {
-    stroke-dashoffset: 537;
+    stroke-dashoffset: 345;
   }
   
   to {
-    stroke-dashoffset: 267;
+    stroke-dashoffset: 172;
   }
 }
 
 @-webkit-keyframes show25 {
   from {
-    stroke-dashoffset: 537;
+    stroke-dashoffset: 345;
   }
   
   to {
-    stroke-dashoffset: 401;
+    stroke-dashoffset: 258;
   }
 }
 
 @keyframes show25 {
   from {
-    stroke-dashoffset: 537;
+    stroke-dashoffset: 345;
   }
   
   to {
-    stroke-dashoffset: 401;
+    stroke-dashoffset: 258;
   }
 }
 /* END Keyframes for the initial animation */

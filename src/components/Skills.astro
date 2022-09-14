@@ -4,75 +4,74 @@ import Skill from '../components/Skill.astro'
 ---
 
 <div class="section">
-    <progress class="progress progress1 is-small" value="100"></progress>
-    
     <div class="box columns">
         <div class="column is-one-quarter">
-            <figure class="main center">
+            <figure class="main main1 center">
                 <Icon name="entypo:code"></Icon>
             </figure>
             <h1 class="center">Programming</h1>          
         </div>
         <div class="column skills">
-            <Skill title="C++" imgsrc="logos:c-plusplus" />
-            <Skill title="Python" imgsrc="logos:python" />
-            <Skill title="C#" imgsrc="logos:c-sharp" />
-            <Skill title="Javascript" imgsrc="logos:javascript"/>
-            <Skill title="Rust" imgsrc="logos:rust"/>
+            <Skill title="Python" imgsrc="icon/python.jpg" level="pro" percent="100" />
+            <Skill title="C++" imgsrc="icon/cpp.jpg" level="pro" percent="100" />
+            <Skill title="C#" imgsrc="icon/csharp.jpg" level="high" percent="75" />
+            <Skill title="Javascript" imgsrc="icon/javascript.jpg" level="mid" percent="50" />
+            <Skill title="Rust" imgsrc="icon/rust.jpg" level="low" percent="25" />
         </div>
     </div>
     <br>
     <div class="box columns">
         <div class="column is-one-quarter">
-            <figure class="main center">
+            <figure class="main main2 center">
                 <Icon name="entypo:tools"></Icon>
             </figure>
             <h1 class="center">Tools</h1>
         </div>
         <div class="column skills">
-            <Skill title="Unity" imgsrc="logos:unity" />
-            <Skill title="Unreal" imgsrc="fontisto:unreal-engine" />
-            <Skill title="Qt" imgsrc="logos:qt"/>
-            <Skill title="OpenGL" imgsrc="simple-icons:opengl"/>
-            <Skill title="Hololens" imgsrc="mdi:hololens"/>
+            <Skill title="Unity" imgsrc="icon/unity.jpg" level="pro" percent="100" />
+            <Skill title="Unreal" imgsrc="icon/unreal.jpg" level="pro" percent="100" />
+            <Skill title="Qt" imgsrc="icon/qt.jpg" level="high" percent="75" />
+            <Skill title="OpenGL" imgsrc="icon/opengl.jpg" level="low" percent="25" />
+            <Skill title="Hololens" imgsrc="icon/hololens.jpg" level="low" percent="25" />
         </div>
     </div>
     <br>
     <div class="box columns">
         <div class="column is-one-quarter">
-            <figure class="main center">
+            <figure class="main main3 center">
                 <Icon name="entypo:pencil"></Icon>
             </figure>
             <h1 class="center">Design</h1>
         </div>
         <div class="column skills">
-            <Skill title="Unity" imgsrc="simple-icons:houdini" />
+            <Skill title="Unity" imgsrc="icon/houdini.jpg" />
             <Skill title="Unreal" imgsrc="file-icons:unrealscript" />
             <Skill title="Qt" imgsrc="logos:qt"/>
             <Skill title="OpenGL" imgsrc="simple-icons:opengl"/>
-            <Skill title="Javascript" imgsrc="logos:javascript"/>
         </div>
     </div>
 </div>
 
 <style>
+    
     h1 {
         color: white;
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .box {
         background-color: #272822;
-        height: 250px;
-        width: 80%;
-        margin: auto;
-        /* width: ; */
     }
 
-    .skills {
-        display: flex;
+    .skills {;
+        display: inline-grid;
+        grid-auto-flow: column;
+        /* justify-items: center;
+        align-items: center; */
+        /* grid-auto-flow: column; */
+        align-content: center;
         justify-content: center;
-        align-items: center;
+        /* grid-template-columns: repeat(auto-fill, 120px); */
     }
 
     .main {
@@ -80,7 +79,18 @@ import Skill from '../components/Skill.astro'
         height: 170px;
         padding: 30px;
         border-radius: 90%;
-        background-color: paleturquoise;
+    }
+    
+    .main1 {
+        background-color: rgb(228, 59, 228);
+    }
+
+    .main2 {
+        background-color: rgb(59, 127, 228);
+    }
+
+    .main3 {
+        background-color: rgb(59, 217, 228);
     }
 
     .icon {
@@ -88,6 +98,9 @@ import Skill from '../components/Skill.astro'
     }
 
     .center {
+        /* display: flex; */
+        justify-content: center;
+        align-content: center;
         margin: auto;
         text-align: center;
     }

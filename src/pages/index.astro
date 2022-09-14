@@ -8,13 +8,14 @@ import Skills from '../components/Skills.astro'
 ---
 
 <Layout title="Remus Wong">
-	<Banner>asdsadassd</Banner>
-	<div class="" style="display: inline;">
-        <progress class="progress progress1 is-small" value="100"></progress>
-		<h1>Skills</h1>
-        <progress class="progress progress2 is-small" value="100"></progress>
-		<h2>Skills</h2>
-    </div>
+	<Banner></Banner>
+	<div class="columns" style="">
+		<div class="column is-2"><h2></h2></div>
+		<div class="column is-1">
+			<h1 class="title has-text-white">Skills</h1>
+		</div>
+		<div class="column"><h2></h2></div>
+	</div>
 	<Skills></Skills>
 	<Info></Info>
 	<!-- <main>
@@ -54,34 +55,19 @@ import Skills from '../components/Skills.astro'
 	}
 
     h2 {
-		overflow: hidden;
-		text-align: center;
-	}
-	
-	h2:before,
-	h2:after {
 		background-color: white;
 		content: "";
 		display: inline-block;
-		font-size: 40px;
 		height: 5px;
 		position: relative;
 		vertical-align: middle;
-		width: 90%;
+		width: 100%;
+		padding: 5px;
 	}
-
-	h2:before {
-		margin-left: -90%;
-		right: 0.5em;	
-	}
-
-	h2:after {
-		margin-right: -10%;
-		left: 0.5em;
-	}
-
+	
 	h1 {
 		margin: 2rem 0;
+		text-align: center;
 	}
 
 	.one-third {
