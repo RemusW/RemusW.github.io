@@ -5,7 +5,7 @@ import Skill from '../components/Skill.astro'
 
 <div class="section">
     <div class="box columns">
-        <div class="column is-4">
+        <div class="column is-4 center">
             <figure class="main main1 center">
                 <Icon name="entypo:code"></Icon>
             </figure>
@@ -15,13 +15,14 @@ import Skill from '../components/Skill.astro'
             <Skill title="C++" imgsrc="icon/cpp.jpg" level="pro" percent="100" />
             <Skill title="Python" imgsrc="icon/python.jpg" level="pro" percent="100" />
             <Skill title="C#" imgsrc="icon/csharp.jpg" level="high" percent="75" />
+            <Skill title="Java" imgsrc="icon/java.jpg" level="high" percent="75" />
             <Skill title="Javascript" imgsrc="icon/javascript.jpg" level="mid" percent="50" />
             <Skill title="Rust" imgsrc="icon/rust.jpg" level="low" percent="25" />
         </div>
     </div>
     <br>
     <div class="box columns">
-        <div class="column is-4">
+        <div class="column is-4 center">
             <figure class="main main2 center">
                 <Icon name="entypo:tools"></Icon>
             </figure>
@@ -31,22 +32,25 @@ import Skill from '../components/Skill.astro'
             <Skill title="Git" imgsrc="icon/git.jpg" level="pro" percent="100" />
             <Skill title="Qt" imgsrc="icon/qt.jpg" level="high" percent="75" />
             <Skill title="PostgreSQL" imgsrc="icon/postgresql.jpg" level="high" percent="75" />
-            <Skill title="Docker" imgsrc="icon/docker.jpg" level="mid" percent="50" />
+            <Skill title="React" imgsrc="icon/react.jpg" level="mid" percent="50" />
+            <Skill title="Docker" imgsrc="icon/docker.jpg" level="low" percent="25" />
             <Skill title="OpenGL" imgsrc="icon/opengl.jpg" level="low" percent="25" />
         </div>
     </div>
     <br>
     <div class="box columns">
-        <div class="column is-4">
+        <div class="column is-4 center">
             <figure class="main main3 center">
                 <Icon name="entypo:pencil"></Icon>
             </figure>
-            <h1 class="center">Design</h1>
+            <h1 class="center">Development</h1>
         </div>
         <div class="column is-8 skills">
             <Skill title="Unity" imgsrc="icon/unity.jpg" level="pro" percent="100" />
-            <Skill title="Unreal" imgsrc="icon/unreal.jpg" level="pro" percent="100" />
+            <Skill title="Unreal Engine" imgsrc="icon/unreal.jpg" level="pro" percent="100" />
             <Skill title="Houdini" imgsrc="icon/houdini.jpg" level="high" percent="75" />
+            <Skill title="Blender" imgsrc="icon/blender.jpg" level="mid" percent="50" />
+            <Skill title="Virtual Reality" imgsrc="icon/vr.jpg" level="mid" percent="50" />
             <Skill title="Hololens" imgsrc="icon/hololens.jpg" level="low" percent="25" />
         </div>
     </div>
@@ -56,7 +60,7 @@ import Skill from '../components/Skill.astro'
     
     h1 {
         color: white;
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .picture {
@@ -73,16 +77,19 @@ import Skill from '../components/Skill.astro'
     }
 
     .skills {
-        display: grid;
+        /* display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, 120px); */
         justify-content: center;
         align-items: center;
-        gap: 1rem;
-        grid-template-columns: repeat(auto-fit, 120px);
+
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .main {
-        width: 170px;
-        height: 170px;
+        width: 160px;
+        height: 160px;
         padding: 30px;
         border-radius: 90%;
     }
