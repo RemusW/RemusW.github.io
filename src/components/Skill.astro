@@ -13,7 +13,7 @@ export interface Props {
 const { imgsrc, title, level, percent } = Astro.props as Props;
 ---
 
-<div class="image-container column">
+<div class="flex-item">
   <div class="center">
       <figure class="chart" data-percent={percent}>
           <img class={level}>
@@ -40,8 +40,9 @@ h1 {
     font-size: large;
 }
 
-.image-container {
+.flex-item {
     display: inline-block;
+    max-width: 155px;
     /* justify-content: center;
     align-items: center; */
     text-align: center;
@@ -54,7 +55,7 @@ h1 {
     align-items: center;
     /* height: inherit;
     width: inherit; */
-    width: 130px;
+    /* width: 130px; */
     font-size: 24px;
     /* margin: 25px; */
     height: 120px;
@@ -67,8 +68,6 @@ h1 {
 .chart {
     position: relative;
     display: inline-block;
-    color: #999;
-    font-size: 20px;
     text-align: center;
     display: flex;
     justify-content: center;

@@ -5,10 +5,10 @@ import { Icon } from 'astro-icon'
 <!-- https://icon-sets.iconify.design/logos/ -->
 
 <section class="section is-medium">
-    <div class="">
-        <div class="box red center">
+    <!-- <div class=""> -->
+        <div class="box red">
             <div class="columns">
-              <div class="column is-one-third">
+              <div class="column is-one-third center-image">
                 <figure class="image is-fullwidth">
                     <img src="head.jpg" alt="headshot">
                 </figure>
@@ -49,17 +49,18 @@ import { Icon } from 'astro-icon'
               </div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 
 </section>
 
 <style>
     .center{
         margin: auto;
-        width: 70%;
-        max-height: 700px;
+        /* width: 70%; */
+        /* max-height: 700px; */
         border: 3px solid green;
-        padding: 10px;
+        /* padding: 10px; */
+        max-height: inherit;
     }
 
     .card {
@@ -98,12 +99,14 @@ import { Icon } from 'astro-icon'
       vertical-align: middle;
     }
 
-    .image {
+    .center-image {
       max-width: inherit;
-      max-height: 400px;
+      max-height: inherit;
+      /* max-height: 400px; */
       height: inherit;
       width: inherit;
-      object-fit: cover;
+      margin: auto;
+      /* object-fit: cover; */
       /* position: relative; */
     }
 </style>

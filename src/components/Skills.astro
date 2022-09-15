@@ -12,8 +12,8 @@ import Skill from '../components/Skill.astro'
             <h1 class="center">Programming</h1>          
         </div>
         <div class="column skills">
-            <Skill title="Python" imgsrc="icon/python.jpg" level="pro" percent="100" />
             <Skill title="C++" imgsrc="icon/cpp.jpg" level="pro" percent="100" />
+            <Skill title="Python" imgsrc="icon/python.jpg" level="pro" percent="100" />
             <Skill title="C#" imgsrc="icon/csharp.jpg" level="high" percent="75" />
             <Skill title="Javascript" imgsrc="icon/javascript.jpg" level="mid" percent="50" />
             <Skill title="Rust" imgsrc="icon/rust.jpg" level="low" percent="25" />
@@ -48,6 +48,7 @@ import Skill from '../components/Skill.astro'
             <Skill title="Unreal" imgsrc="file-icons:unrealscript" />
             <Skill title="Qt" imgsrc="logos:qt"/>
             <Skill title="OpenGL" imgsrc="simple-icons:opengl"/>
+            <Skill title="OpenGL" imgsrc="simple-icons:opengl"/>
         </div>
     </div>
 </div>
@@ -63,15 +64,17 @@ import Skill from '../components/Skill.astro'
         background-color: #272822;
     }
 
-    .skills {;
-        display: inline-grid;
-        grid-auto-flow: column;
-        /* justify-items: center;
-        align-items: center; */
-        /* grid-auto-flow: column; */
-        align-content: center;
+    .skills {
+        width: 100%;
+        display: grid;
         justify-content: center;
-        /* grid-template-columns: repeat(auto-fill, 120px); */
+        align-items: center;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-auto-flow: column; */
+        
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, 120px);
     }
 
     .main {
