@@ -5,13 +5,13 @@ import Skill from '../components/Skill.astro'
 
 <div class="section">
     <div class="box columns">
-        <div class="column is-one-quarter">
+        <div class="column is-4">
             <figure class="main main1 center">
                 <Icon name="entypo:code"></Icon>
             </figure>
             <h1 class="center">Programming</h1>          
         </div>
-        <div class="column skills">
+        <div class="column is-8 skills">
             <Skill title="C++" imgsrc="icon/cpp.jpg" level="pro" percent="100" />
             <Skill title="Python" imgsrc="icon/python.jpg" level="pro" percent="100" />
             <Skill title="C#" imgsrc="icon/csharp.jpg" level="high" percent="75" />
@@ -21,34 +21,33 @@ import Skill from '../components/Skill.astro'
     </div>
     <br>
     <div class="box columns">
-        <div class="column is-one-quarter">
+        <div class="column is-4">
             <figure class="main main2 center">
                 <Icon name="entypo:tools"></Icon>
             </figure>
             <h1 class="center">Tools</h1>
         </div>
-        <div class="column skills">
-            <Skill title="Unity" imgsrc="icon/unity.jpg" level="pro" percent="100" />
-            <Skill title="Unreal" imgsrc="icon/unreal.jpg" level="pro" percent="100" />
+        <div class="column is-8 skills">
+            <Skill title="Git" imgsrc="icon/git.jpg" level="pro" percent="100" />
             <Skill title="Qt" imgsrc="icon/qt.jpg" level="high" percent="75" />
+            <Skill title="PostgreSQL" imgsrc="icon/postgresql.jpg" level="high" percent="75" />
+            <Skill title="Docker" imgsrc="icon/docker.jpg" level="mid" percent="50" />
             <Skill title="OpenGL" imgsrc="icon/opengl.jpg" level="low" percent="25" />
-            <Skill title="Hololens" imgsrc="icon/hololens.jpg" level="low" percent="25" />
         </div>
     </div>
     <br>
     <div class="box columns">
-        <div class="column is-one-quarter">
+        <div class="column is-4">
             <figure class="main main3 center">
                 <Icon name="entypo:pencil"></Icon>
             </figure>
             <h1 class="center">Design</h1>
         </div>
-        <div class="column skills">
-            <Skill title="Unity" imgsrc="icon/houdini.jpg" />
-            <Skill title="Unreal" imgsrc="file-icons:unrealscript" />
-            <Skill title="Qt" imgsrc="logos:qt"/>
-            <Skill title="OpenGL" imgsrc="simple-icons:opengl"/>
-            <Skill title="OpenGL" imgsrc="simple-icons:opengl"/>
+        <div class="column is-8 skills">
+            <Skill title="Unity" imgsrc="icon/unity.jpg" level="pro" percent="100" />
+            <Skill title="Unreal" imgsrc="icon/unreal.jpg" level="pro" percent="100" />
+            <Skill title="Houdini" imgsrc="icon/houdini.jpg" level="high" percent="75" />
+            <Skill title="Hololens" imgsrc="icon/hololens.jpg" level="low" percent="25" />
         </div>
     </div>
 </div>
@@ -60,19 +59,23 @@ import Skill from '../components/Skill.astro'
         font-size: 35px;
     }
 
+    .picture {
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
     .box {
         background-color: #272822;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .skills {
-        width: 100%;
         display: grid;
         justify-content: center;
         align-items: center;
-        /* grid-template-columns: 1fr 1fr 1fr; */
-        /* grid-auto-flow: column; */
-        
-        display: grid;
         gap: 1rem;
         grid-template-columns: repeat(auto-fit, 120px);
     }
@@ -85,15 +88,15 @@ import Skill from '../components/Skill.astro'
     }
     
     .main1 {
-        background-color: rgb(228, 59, 228);
+        background-color: #ae81ff;
     }
 
     .main2 {
-        background-color: rgb(59, 127, 228);
+        background-color: #61cce0;
     }
 
     .main3 {
-        background-color: rgb(59, 217, 228);
+        background-color: #a6e22e;
     }
 
     .icon {

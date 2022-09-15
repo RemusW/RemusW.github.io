@@ -4,7 +4,7 @@ import { Icon } from 'astro-icon'
 
 <!-- https://icon-sets.iconify.design/logos/ -->
 
-<section class="section is-medium">
+<section class="section">
     <!-- <div class=""> -->
         <div class="box red">
             <div class="columns">
@@ -14,15 +14,16 @@ import { Icon } from 'astro-icon'
                 </figure>
               </div>
               <div class="column is-two-third">
-                <div class="content is-medium">
-                  <h1 class="title is-1">Remus Wong</h1>
-                  <br>
-                  A graduate of the University of Texas, Remus Wong studied Computer Science 
-                  with a focus on computer graphics. With his highly technical background, he 
-                  is a Technical Artist focused on engineering powerful tools to support effective 
-                  art pipelines. Utilizing game development and programming skills, Remus is interested 
-                  in creating procedurally generated environments, dynamic visual effects, and more 
-                  to craft immersive experiences.
+                <div class="content">
+                  <p class="title is-1 bio">Remus Wong</p>
+                  <span class="bio">
+                    A graduate of the University of Texas, Remus Wong studied Computer Science 
+                    with a focus on computer graphics. With his highly technical background, he 
+                    is a Technical Artist focused on engineering powerful tools to support effective 
+                    art pipelines. Utilizing game development and programming skills, Remus is interested 
+                    in creating procedurally generated environments, dynamic visual effects, and more 
+                    to craft immersive experiences.
+                  </span>
                 </div>
                 <div class="block">
                   <a href="Resume.pdf">
@@ -79,12 +80,19 @@ import { Icon } from 'astro-icon'
       display: flex;
     }
 
+    .content {
+      color: whitesmoke;
+    }
+
     .green {
       background-color: #92d82e;
     }
 
     .red {
-      background-color: #f52668;
+      background-color: #e7266a;
+      width: 85%;
+      /* max-height: ; */
+      margin: auto;
     }
 
     .container{
@@ -95,8 +103,11 @@ import { Icon } from 'astro-icon'
       background-color: #f52668;
     }
 
-    .summary {
-      vertical-align: middle;
+    .bio {
+      font-size: 20px;
+      color: whitesmoke;
+
+      /* font-size: 1vw; */
     }
 
     .center-image {
